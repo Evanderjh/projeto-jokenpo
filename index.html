@@ -1,0 +1,69 @@
+<!DOCTYPE html> 
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jokenpô</title>
+    <link rel="stylesheet" href="./assets/styles/global.css" />
+    <script src="./script.js"></script>
+</head>
+
+<body>
+    <section class="section-1">
+        <div>
+            <h1>Jokenpô</h1>
+            <form action="">
+                <label for="nome">Digite seu nome:</label>
+                <input type="text" name="nome" id="nome" />
+            </form>        
+            <button onclick="iniciar()">Play</button>
+        </div>
+    </section>
+
+    <section class="section-2">
+        <div class="container-1">
+            <div>
+                <h3>IA</h3>
+                <div class="icone">
+                    <img id="icone-ia" src="./assets/images/vazio.png" alt="Figura da escolha do IA." />
+                </div>
+            </div>
+            <div>
+                <h3 id="player">Player</h3>
+                <div class="icone">
+                    <img id="icone-player" src="./assets/images/vazio.png" alt="Figura da escolha do jogador." />
+                </div>
+                <div class="selection">
+                    <img onclick="jogar(0)" src="./assets/images/papel.png" alt="Botão papel" />
+                    <img onclick="jogar(1)" src="./assets/images/pedra.png" alt="Botão pedra" />
+                    <img onclick="jogar(2)" src="./assets/images/tesoura.png" alt="Botão tesoura" />
+                </div>
+            </div>
+        </div>
+        <div  class="container-2">
+            <h2>Jokenpô</h2>
+            <h3 id="resultado"></h3>
+            <h3>Potuação</h3>
+            <div>
+                <div>
+                    <p>Vitórias:</p>
+                    <p>Derrotas:</p>
+                    <p>Empates:</p>
+                    <p>Sequências de Vitórias:</p>
+                    <p>Total de partidas:</p>
+                </div>
+                <div>
+                    <p id="vitorias">0</p>
+                    <p id="derrotas">0</p>
+                    <p id="empates">0</p>
+                    <p id="seq-vitorias">0</p>
+                    <p id="total-partidas">0</p>
+                </div>
+            </div>
+            <button onclick="resetar()">Resetar</button>
+        </div>
+    </section>
+</body>
+
+</html>
